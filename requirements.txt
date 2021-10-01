@@ -1,0 +1,9 @@
+ pyaudio
+ librosa
+ schedule
+ scipy
+ numpy
+ tensorflow
+ six
+ scikit-learn
+ python-gsmmodem
