@@ -3,7 +3,7 @@
  schedule
  scipy
  numpy
- tensorflow
+#  tensorflow
  six
  scikit-learn
  python-gsmmodem

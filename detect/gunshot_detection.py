@@ -18,7 +18,7 @@ from threading import Thread
 from datetime import timedelta as td
 from queue import Queue
 from sklearn.preprocessing import LabelBinarizer
-from tensorflow.keras import backend as K
+# from tensorflow.keras import backend as K
 from gsmmodem.modem import GsmModem
 
 
@@ -282,10 +282,10 @@ def clear_log_file():
 
 # ROC (AUC) metric - Uses the import "from tensorflow.keras import backend as K" #
 
-def auc(y_true, y_pred):
-    auc = tf.metrics.auc(y_true, y_pred)[1]
-    K.get_session().run(tf.local_variables_initializer())
-    return auc
+# def auc(y_true, y_pred):
+#     auc = tf.metrics.auc(y_true, y_pred)[1]
+#     K.get_session().run(tf.local_variables_initializer())
+#     return auc
 
 
 # Loading the Models #

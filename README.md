@@ -1,12 +1,17 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
-
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Gunshoot Detection 
+put reasoning for this project 
+Address the following areas:
+- community
+- legal implication (e.g privacy)
+- ability to report and respond
+- short, mid and long term improvments 
+## Abstract
+address the architectue concepts and guidlines, the following subjects require attention (not in an any order of importance):
+- deployment - what is the best way to deploy single and detection units (3 or more autonomic units)
+- security - what is stored on the devices? how are devices identify? how do we keep the position ?
+- connectivity - what is the best way for communication? (REST / AMNQ ?) do we need a heartbeat from each unit and detection unit?
+- new models, improvments - how is it tricled to the deployed units?
+- notification and reporting, short mid and long term - what are the alternatives? 
 
 # Build and Test
 TODO: Describe and show how to build your code and run the tests. 
@@ -21,6 +26,14 @@ If you want to learn more about creating good readme files then refer the follow
 
 # Prep your device
 https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#2-prepare-the-sd-card
+
+need to remember to install python3.8 not 3.9!
+use the 20.04 os for the device, it comes with python3.8
+https://linuxize.com/post/how-to-install-python-3-8-on-ubuntu-18-04/
+
+sudo apt install python3-pip
+
+
 
 for pyaudio
 sudo apt-get install portaudio19-dev
