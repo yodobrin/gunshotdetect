@@ -1,9 +1,10 @@
- pyaudio
- librosa
- schedule
- scipy
- numpy
+pyaudio
+librosa
+schedule
+scipy
+numpy
 #  tensorflow
- six
- scikit-learn
- python-gsmmodem
+six
+scikit-learn
+python-gsmmodem
+soundfile
