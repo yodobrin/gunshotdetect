@@ -20,10 +20,18 @@ Enhance Sound Model to detect type of gus (9mm, 5.56mm etc.)
 - Each unit emmits telemetry of 3 sound models (values from 0-1) per ~30 sec
 - devices are located 300 meters apart or less
 - All telemtry data funnel to Cosmos via data export utility of IoT Central. Data is enriched with device data.
+- Data flows through eventhub and ingested by a function
+- The function validate required data elements are on the message, perform validation of the model scores and decide if it is to be marked as a detection.
+- Another functions is triggered once a minute on the 15th second, and performs:
+    - Query the inventory collection, finding out what devices are avilable
+    - Query the telemetry collection based on the municipality (which acts as the partition key)
+- The DB is marked to have the synapse analytics enabled
+- Each collection has synapse analytics
+- We use the serverless option in Synapse to reduce cost
+- Few viewes were created to enable PowerBI query the refreshed data comming in
+- PowerBI model was created to support few simple reports
 
-On the db side:
-- if 3 models avg is over a predefined threshold - a gunshot is suspected on a specific unit
-- every 30 seconds get all suspected gunshot locations from the last minute, order by timestamp asc, 
+
 
 ** what about multiple gunshots?
 # Build and Test
