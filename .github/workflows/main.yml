@@ -2,7 +2,11 @@ name: Deploy DotNet project to function app with a Linux environment
 
 on:
   pull_request:
+    paths-ignore:
+    - '**.md'
     branches: [ main ]
+
+    
 
 env:
   AZURE_FUNCTIONAPP_NAME: gunshotdetectfunctions
