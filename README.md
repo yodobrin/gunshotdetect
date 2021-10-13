@@ -13,6 +13,8 @@ Enhance Sound Model to detect type of gus (9mm, 5.56mm etc.)
 
  
 ## Abstract
+![image](https://user-images.githubusercontent.com/37622785/137107471-072e14ec-fbb6-4dda-808a-c03f3403f7c0.png)
+
 
 ## Concept solution
 - Each unit emmits telemetry of 3 sound models (values from 0-1) per ~30 sec
