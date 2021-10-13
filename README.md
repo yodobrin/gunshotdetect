@@ -8,8 +8,8 @@ While we live in Israel and the current personal safety of Arab civilians is in 
 Data would start the conversation, it will allow authorities to develop plans and measure their plans progression.
 
 ## Future Looking 
-Visual elements with dispatched drones and gathering surveillance camera feeds.
-Enhance Sound Model to detect type of gus (9mm, 5.56mm etc.)
+- Visual elements with dispatched drones and gathering surveillance camera feeds.
+- Enhance Sound Model to detect type of gus (9mm, 5.56mm etc.)
 
  
 ## Abstract
@@ -31,17 +31,16 @@ Enhance Sound Model to detect type of gus (9mm, 5.56mm etc.)
 - Few viewes were created to enable PowerBI query the refreshed data comming in
 - PowerBI model was created to support few simple reports
 
-
-
-** what about multiple gunshots?
 # Build and Test
-Using vs code to develop iot modules - see [documentation](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-vs-code-develop-module?view=iotedge-2020-11)
+As part of the hack, and attempt was made to leverage Rasbary Pie 3 b+. However due to multiple HW issues, and the limited time given, we made a calculated decsion to leverage device simulation provided by IoT Central.
+When building a device model, it is advised to examine our official  [documentation](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-vs-code-develop-module?view=iotedge-2020-11).
+There is also the option to trial and error with the portal (which to be honest is what we did) you can examine the device model in this repo.
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Contact one of the repo collaborators to gain access. 
 
-
-# Prep your device
+# This is not confirmed content 
+## Prep your device
 https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#2-prepare-the-sd-card
 
 ```sudo apt  install network-manager```
@@ -70,8 +69,6 @@ for pyaudio
 sudo apt-get install portaudio19-dev
 
 dockers
-
-docker login -u gunshotregistry -p P=4JbSdJ0IOowcygYeCwlPJwu37Sguac gunshotregistry.azurecr.io
 
 docker tag heartbeat gunshotregistry.azurecr.io/heartbeat
 docker push gunshotregistry.azurecr.io/heartbeat

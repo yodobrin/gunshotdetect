@@ -1,0 +1,109 @@
+{
+    "@id": "dtmi:gunshotiot:percept588;1",
+    "@type": "Interface",
+    "contents": [
+        {
+            "@id": "dtmi:gunshotiot:percept588:location;1",
+            "@type": "Property",
+            "displayName": {
+                "en": "location"
+            },
+            "name": "location",
+            "schema": "geopoint",
+            "writable": true
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:devicename;1",
+            "@type": "Property",
+            "displayName": {
+                "en": "devicename"
+            },
+            "name": "devicename",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:deviceheartbeat;1",
+            "@type": "Telemetry",
+            "displayName": {
+                "en": "deviceheartbeat"
+            },
+            "name": "deviceheartbeat",
+            "schema": "dateTime",
+            "unit": "millisecond"
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:model1;1",
+            "@type": [
+                "Telemetry",
+                "Volume"
+            ],
+            "displayName": {
+                "en": "model1"
+            },
+            "name": "model1",
+            "schema": "double"
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:model2;1",
+            "@type": [
+                "Telemetry",
+                "Volume"
+            ],
+            "displayName": {
+                "en": "model2"
+            },
+            "name": "model2",
+            "schema": "double"
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:model3;1",
+            "@type": [
+                "Telemetry",
+                "Volume"
+            ],
+            "displayName": {
+                "en": "model3"
+            },
+            "name": "model3",
+            "schema": "double"
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:municipality;1",
+            "@type": "Property",
+            "displayName": {
+                "en": "municipality"
+            },
+            "name": "municipality",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:clusterid;1",
+            "@type": "Property",
+            "displayName": {
+                "en": "clusterid"
+            },
+            "name": "clusterid",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@id": "dtmi:gunshotiot:percept588:deviceId;1",
+            "@type": "Property",
+            "displayName": {
+                "en": "deviceId"
+            },
+            "name": "deviceId",
+            "schema": "string",
+            "writable": true
+        }
+    ],
+    "displayName": {
+        "en": "percept"
+    },
+    "@context": [
+        "dtmi:iotcentral:context;2",
+        "dtmi:dtdl:context;2"
+    ]
+}
