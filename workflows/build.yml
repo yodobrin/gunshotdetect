@@ -1,13 +1,13 @@
 name: Deploy DotNet project to function app with a Linux environment
 
 on:
-  [push]
+  [push,workflow_dispatch]
 
 env:
-  AZURE_FUNCTIONAPP_NAME: gunshotdetectfunctions  # set this to your application's name
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: './server/'    # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '3.0.13'              # set this to the dotnet version to use
-
+  AZURE_FUNCTIONAPP_NAME: gunshotdetectfunctions
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: './server/'   
+  DOTNET_VERSION: '3.0.13'
+  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
