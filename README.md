@@ -10,6 +10,7 @@ Data would start the conversation, it will allow authorities to develop plans an
 ## Future Looking 
 - Visual elements with dispatched drones and gathering surveillance camera feeds.
 - Enhance Sound Model to detect type of gus (9mm, 5.56mm etc.)
+- Upload to blob using the provided function
 
  
 ## Abstract
