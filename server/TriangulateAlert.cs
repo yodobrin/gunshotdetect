@@ -137,6 +137,12 @@ namespace server
 
         }
         
+        /*
+            As of initial drop the triangulate does not take into account the ts diffrences, rather 
+            performs an average of the reported devices location.
+            This will need to be finetuned for a live system.
+        
+        */
         public static string Triangulate(double [] lat, double[] lon)
         {
             double avg_lat = getAvg(lat);
