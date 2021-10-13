@@ -1,22 +1,23 @@
 # Gunshoot Detection 
-put reasoning for this project 
-Address the following areas:
-- community
-- legal implication (e.g privacy)
-- ability to report and respond
-- short, mid and long term improvments 
+There are multiple areas that the civilian majority is suffering from a violent groups, which use guns to intimidate civilians. 
+Gun fires are not logged, reported (due to many reasons) or handled by the police.
+We came to realize the most fit solution for the hack is using IoT Central and building our own simulated devices. As we wish to address the lack of gathered data from the field, and act upon data, the actual devices play a role, but not a critical one for the hack.
+
+## The Israeli View
+While we live in Israel and the current personal safety of Arab civilians is in decline, so far over one hundred people murdered and the Police is clueless regarding finding the killers. This is a situation that might be in other areas. While we are not aiming to solve the underline reasons for this situation, we do hope to address and assist the Police or other authorities in finding people who uses guns in an urban and other areas. One of the areas that has limited to no visability is the actual data. How many shots are fired? Where? Are there any patterns that we can seek.
+Data would start the conversation, it will allow authorities to develop plans and measure their plans progression.
+
+## Future Looking 
+Visual elements with dispatched drones and gathering surveillance camera feeds.
+Enhance Sound Model to detect type of gus (9mm, 5.56mm etc.)
+
+ 
 ## Abstract
-address the architectue concepts and guidlines, the following subjects require attention (not in an any order of importance):
-- deployment - what is the best way to deploy single and detection units (3 or more autonomic units)
-- security - what is stored on the devices? how are devices identify? how do we keep the position ?
-- connectivity - what is the best way for communication? (REST / AMNQ ?) do we need a heartbeat from each unit and detection unit?
-- new models, improvments - how is it tricled to the deployed units?
-- notification and reporting, short mid and long term - what are the alternatives? 
 
 ## Concept solution
 - Each unit emmits telemetry of 3 sound models (values from 0-1) per ~30 sec
 - devices are located 300 meters apart or less
-- All telemtry data needs to funnel to a db
+- All telemtry data funnel to Cosmos via data export utility of IoT Central. Data is enriched with device data.
 
 On the db side:
 - if 3 models avg is over a predefined threshold - a gunshot is suspected on a specific unit
