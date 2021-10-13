@@ -1,0 +1,17 @@
+# Install DotNet on Runner
+
+    - name: Setup DotNet 3.0.13 Environment
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.13
+        
+    env:
+      AZURE_FUNCTIONAPP_PACKAGE_PATH: './server/'
+
+# Resolve Deps
+    - name: 'Resolve Project Dependencies Using Dotnet'
+      shell: bash
+      run: |
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+        dotnet build --configuration Release --output ./output
+        popd
