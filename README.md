@@ -14,7 +14,8 @@ Data would start the conversation, it will allow authorities to develop plans an
 
  
 ## Abstract
-![image](https://user-images.githubusercontent.com/37622785/137107471-072e14ec-fbb6-4dda-808a-c03f3403f7c0.png)
+![image](https://user-images.githubusercontent.com/37622785/137309050-5118ad48-e75a-4ff8-a683-7607c6c0bc94.png)
+
 
 
 ## Concept solution
@@ -36,6 +37,26 @@ Data would start the conversation, it will allow authorities to develop plans an
 As part of the hack, and attempt was made to leverage Rasbary Pie 3 b+. However due to multiple HW issues, and the limited time given, we made a calculated decsion to leverage device simulation provided by IoT Central.
 When building a device model, it is advised to examine our official  [documentation](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-vs-code-develop-module?view=iotedge-2020-11).
 There is also the option to trial and error with the portal (which to be honest is what we did) you can examine the device model in this repo.
+
+## .NET code
+2 main functions, one which perform data ingestion from eventhub to cosmos, the second is time triggered and checks the number of events per area, determines the estimated location and saves to addtional collection.
+EventHub is used as the sink for data export from the IoT Central
+Cosmos with synapse link enabled, having 3 collections, device inventory, raw telemetry, calculated alerts
+Synapse serverless, we created few viewed which Power BI, can use as the underline data source.
+
+## IoT Central
+### Device Template
+This repo contains a reference device model, which we used.
+![image](https://user-images.githubusercontent.com/37622785/137309766-51382435-d6f7-46d9-9531-51e92b40b8f5.png)
+
+You can customize the behavior of telemetry values, and also address the initialzation of property values:
+![image](https://user-images.githubusercontent.com/37622785/137309911-446df01c-6e22-45df-bf9e-f23937cc4bcf.png)
+
+![image](https://user-images.githubusercontent.com/37622785/137310122-1881398b-78cb-4b6a-9693-d4f73e9a9023.png)
+
+### Data Export
+The export tool, allows adding enrichment to the telemetry data, we used it to enrich with the properties of the devices, such as location, name etc.
+![image](https://user-images.githubusercontent.com/37622785/137310358-edc567e7-c4dd-49b9-aa5c-db3eb853cb3d.png)
 
 # Contribute
 Contact one of the repo collaborators to gain access. 
